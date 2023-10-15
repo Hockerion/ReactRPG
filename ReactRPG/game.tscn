@@ -1,0 +1,199 @@
+[gd_scene load_steps=12 format=3 uid="uid://c7hvsyfssf5pd"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_2mfoa"]
+[ext_resource type="FontFile" uid="uid://c8a6wnodmhqum" path="res://CroissantOne-Regular.ttf" id="1_ujibw"]
+[ext_resource type="PackedScene" uid="uid://ba0ahxqf66tti" path="res://zones/zone.tscn" id="2_25auc"]
+[ext_resource type="Script" path="res://CommandProcessor.gd" id="4_f54w7"]
+[ext_resource type="Script" path="res://input/Input.gd" id="5_nvp1t"]
+[ext_resource type="Script" path="res://Player.gd" id="7_2hn2b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s71fv"]
+bg_color = Color(0.192157, 0.156863, 0.176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ru0h7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oj6fg"]
+bg_color = Color(0.380392, 0.419608, 0.419608, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xojl6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_obw42"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2mfoa")
+
+[node name="ZoneManager" type="Node" parent="."]
+
+[node name="RoomZone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_left = -353.0
+offset_top = -265.0
+offset_right = -84.0
+offset_bottom = -65.0
+zone_name = "Player's Bedroom"
+zone_description = "your own bedroom. Your toys, memories, and comfy bed are present. You should head outside and talk to your mother."
+
+[node name="HouseZone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_top = -276.0
+offset_bottom = -76.0
+zone_name = "Home"
+zone_description = "the your home, the player's home. It is homely and filled with fond memories of your earlier life. Your parent's have just lefton a business trip and you're alone."
+
+[node name="OutsideZone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_left = 394.0
+offset_top = -280.0
+offset_right = 644.0
+offset_bottom = -80.0
+zone_name = "Outside"
+zone_description = "outside the Player's home. It is faced with the Burgmeister's Road in the front, the garden to the north, and the great forest of Trondelag to the south."
+
+[node name="GardenZone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_left = 392.0
+offset_top = -582.0
+offset_right = 642.0
+offset_bottom = -382.0
+zone_name = "Garden"
+zone_description = "the garden filled with wildlife. It is filled with freshly planted flowers such as Magnolias, Daffodils, Roses, and Hibiscus. Your Mom has taken care of this garden with diligence and love. "
+
+[node name="Road1Zone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_left = 792.0
+offset_top = -288.0
+offset_right = 1042.0
+offset_bottom = -88.0
+zone_name = "Burgmeister's Road"
+zone_description = "the road outside your home. It leads to Rizal Square to the east and Silliman Hall to the North, while the savage lands of the Great Trondelag Forest lie in the south. "
+
+[node name="Road2Zone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_left = 1209.0
+offset_top = -301.0
+offset_right = 1477.0
+offset_bottom = -95.0
+zone_name = "Rizal Square"
+zone_description = "the village center surrounded by commercial shops and houses. It leads to Doltz Road to the north, the Spencer Estate to the east, and the Hawksburn residence to the south."
+
+[node name="Road3Zone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_left = 1202.0
+offset_top = -593.0
+offset_right = 1480.0
+offset_bottom = -393.0
+zone_name = "Doltz Road"
+zone_description = "the road that leads to Hibbard Gate. It leads to Sillman Hall to the West, Hilda's Inn to the east, Rizal Square to the south, and Hibbard Gate to the north."
+
+[node name="StoreZone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_left = 1207.0
+offset_top = -2.0
+offset_right = 1474.0
+offset_bottom = 198.0
+zone_name = "Jacob's Store"
+zone_description = "the family store of your good friend, Jacob Hawksburn, One of the three sons of Hanz the Inventor and Matilda the tailor."
+
+[node name="FriendZone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_left = 1607.0
+offset_top = -303.0
+offset_right = 1871.0
+offset_bottom = -103.0
+zone_name = "Emily's House"
+zone_description = "the home of your dear friend Emily Spencer, daughter of Jermaine the Warrior and Mary the Healer. You are a welcomed guest to the home and the family treats you as their adpotive son."
+
+[node name="InnZone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_left = 1582.0
+offset_top = -607.0
+offset_right = 1869.0
+offset_bottom = -387.0
+zone_name = "Hilda's Inn"
+zone_description = "the main inn within the village and is owned by Hilda the Saint. It hosts many rooms for weary travelers and provides accomodation adn entertainment for both travelers and locals."
+
+[node name="HallZone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_left = 790.0
+offset_top = -644.0
+offset_right = 1051.0
+offset_bottom = -343.0
+zone_name = "Silliman Hall"
+zone_description = "the administrative center of Silliman Village. It is currently headed by the current Barangay Chairman, Dane the Wise. Named after Sillimanus the Great, Emperor of the Fir st Human Empire, the village looks towards the ancients for wisdom and strength."
+
+[node name="GateZone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_left = 1203.0
+offset_top = -911.0
+offset_right = 1470.0
+offset_bottom = -664.0
+zone_name = "Hibbard Gate"
+zone_description = "the gate that leads to the outside the village. Named after Hibbardos the Magnificent, the gate protects the village from the outside world and hosts as a barrier between civilization and the wilderness."
+
+[node name="WidZone" parent="ZoneManager" instance=ExtResource("2_25auc")]
+offset_left = 1087.0
+offset_top = -1187.0
+offset_right = 1583.0
+offset_bottom = -940.0
+zone_name = "WildlandsName"
+zone_description = "the area outside Hibbard Gate. The road pushes on towards the nearby settlement of Vernon Village, however the path goes through the great  Bacolod Forest with many dangers awaiting within, from common threats such as  wolves, slimes, and bandits, to the infamous ones such as the dreaded witch of the Porcelain Tower, Siquijora the Heartless, the great sorceror Credolax of Moonstone peak, the great beast Softengeros of the badlands, and the dreaded 3-headed dragon of the Skylancer Mountains, Thesisarox the Hellspawn, ."
+
+[node name="Background" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_s71fv")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GameInterface" type="VBoxContainer" parent="Background/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="GameInfo" type="PanelContainer" parent="Background/MarginContainer/GameInterface"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ru0h7")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Background/MarginContainer/GameInterface/GameInfo"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="StoryHistory" type="VBoxContainer" parent="Background/MarginContainer/GameInterface/GameInfo/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="InputArea" type="PanelContainer" parent="Background/MarginContainer/GameInterface"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oj6fg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer/GameInterface/InputArea"]
+layout_mode = 2
+
+[node name="Caret" type="Label" parent="Background/MarginContainer/GameInterface/InputArea/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ujibw")
+text = " > "
+
+[node name="Input" type="LineEdit" parent="Background/MarginContainer/GameInterface/InputArea/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_ujibw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xojl6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_obw42")
+max_length = 300
+script = ExtResource("5_nvp1t")
+
+[node name="CommandProcessor" type="Node" parent="."]
+script = ExtResource("4_f54w7")
+
+[node name="Player" type="Node" parent="."]
+script = ExtResource("7_2hn2b")
+
+[connection signal="text_submitted" from="Background/MarginContainer/GameInterface/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="Background/MarginContainer/GameInterface/InputArea/HBoxContainer/Input" to="Background/MarginContainer/GameInterface/InputArea/HBoxContainer/Input" method="_on_text_submitted"]

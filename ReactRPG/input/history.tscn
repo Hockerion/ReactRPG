@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvg3squ718g5u"]
+
+[ext_resource type="FontFile" uid="uid://c8a6wnodmhqum" path="res://CroissantOne-Regular.ttf" id="1_urs4u"]
+
+[node name="History" type="Label"]
+theme_override_fonts/font = ExtResource("1_urs4u")
+text = " > This is what the user typed..."
+autowrap_mode = 2

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba0ahxqf66tti"]
+
+[ext_resource type="Script" path="res://zones/zone.gd" id="1_oyj5q"]
+[ext_resource type="FontFile" uid="uid://c8a6wnodmhqum" path="res://CroissantOne-Regular.ttf" id="2_7yw41"]
+
+[node name="Zone" type="PanelContainer"]
+custom_minimum_size = Vector2(250, 200)
+offset_top = 82.0
+offset_right = 250.0
+offset_bottom = 282.0
+script = ExtResource("1_oyj5q")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="ZoneRows" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ZoneName" type="Label" parent="MarginContainer/ZoneRows"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7yw41")
+text = "Room Name"
+horizontal_alignment = 1
+
+[node name="ZoneDescription" type="Label" parent="MarginContainer/ZoneRows"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7yw41")
+text = "This is the description of the room!"
+autowrap_mode = 3
