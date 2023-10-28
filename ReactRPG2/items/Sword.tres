@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://dxqu432oqa8ie"]
+
+[ext_resource type="Script" path="res://items/Item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+item_name = "Daeschblade"
+item_type = 1

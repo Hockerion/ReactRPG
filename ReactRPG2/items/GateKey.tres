@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bnbvhtuperotl"]
+
+[ext_resource type="Script" path="res://items/Item.gd" id="1_ob4xk"]
+
+[resource]
+script = ExtResource("1_ob4xk")
+item_name = "Gatekey"
+item_type = 0

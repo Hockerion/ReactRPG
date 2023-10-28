@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://d1cerc7nse2rp"]
+
+[ext_resource type="Script" path="res://npcs/NPC.gd" id="1"]
+[ext_resource type="Resource" uid="uid://clh3r2gwptkvi" path="res://items/Sweets.tres" id="1_kkfpp"]
+
+[resource]
+script = ExtResource("1")
+npc_name = "Emily"
+initial_dialog = "Hi there Player! It’s nice to see a good old friend's face for once. Spencer Estate has been busy lately as many high-ranking guests are arriving throughout the empire. There not only here due to the festivities, but because dad is currently releasing his new line of armor named the Cogox Palatinatus, co-created with the great blacksmith Sam of Salashire, and blessed by Saint Moses of Medusa. We are currently running out of sweets to give to the guests, so can you please get some from Jacob's store? We prefer Aiangco’s Delights as many of the guests have a sweet tooth. I'll pay you back, I promise!"
+post_quest_dialog = "You brought it! Thank you so much for the help! Spencer Estate would forever be in your debt. I wish I could entertain you further, but there are new guests arriving with the Grand Duke of Cebu-Mactan, Sir Tecreido Ouitengsou Riverum, just arriving at the gates. You should explore the village and see who else needs your help. Lets hang out afterwards."
+quest_item = ExtResource("1_kkfpp")

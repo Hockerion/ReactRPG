@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://y4601uuay870"]
+
+[ext_resource type="Script" path="res://items/Item.gd" id="1_21rsw"]
+
+[resource]
+script = ExtResource("1_21rsw")
+item_name = "Papaya"
+item_type = 1
