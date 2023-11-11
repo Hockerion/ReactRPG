@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://dw10w4m4hyu5b"]
+
+[ext_resource type="Resource" uid="uid://cvyrbjy2iabtm" path="res://items/Vegetable.tres" id="1_jjre8"]
+[ext_resource type="Script" path="res://npcs/NPC.gd" id="1_r8lt8"]
+
+[resource]
+script = ExtResource("1_r8lt8")
+npc_name = "Jacob"
+initial_dialog = "Hi there Player! Thanks for stopping by. I'm grateful for the visit but the timing is horrendous due to the festival. This may seem sudden, but you have garden, right? Can you get me a Pechay from there? We currently need one for our family's secret dish, Manocurx du Adoboix. Pops would give the payment directly to your mom. Thanks mate, I owe you one for this."
+post_quest_dialog = "Thanks for the Apple mate! I would love to chat more but a new shipment of Moren Cakes has just arrived and dad wants me to handle them. You should visit Mrs. Hilda at the Dumaguete Inn. I've heard she has trouble recently with the festive preparations. "
+quest_item = ExtResource("1_jjre8")

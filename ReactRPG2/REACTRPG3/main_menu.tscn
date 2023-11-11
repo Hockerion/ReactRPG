@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://degkllavj4dde"]
+
+[ext_resource type="Script" path="res://MainMenuButtons.gd" id="2_yghsq"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.345098, 0.0980392, 0.160784, 1)
+
+[node name="MainMenuContainer" type="VBoxContainer" parent="UI/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -262.0
+offset_right = 175.0
+offset_bottom = 262.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+script = ExtResource("2_yghsq")
+
+[node name="NewButton" type="Button" parent="UI/ColorRect/MainMenuContainer"]
+custom_minimum_size = Vector2(350, 110)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="UI/ColorRect/MainMenuContainer/NewButton"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 23.0
+offset_right = 301.0
+offset_bottom = 89.0
+theme_override_font_sizes/font_size = 45
+text = "NEW GAME"
+
+[node name="LoadButton" type="Button" parent="UI/ColorRect/MainMenuContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="UI/ColorRect/MainMenuContainer/LoadButton"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 25.0
+offset_right = 309.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 45
+text = "LOAD GAME"
+
+[node name="OptionsButton" type="Button" parent="UI/ColorRect/MainMenuContainer"]
+custom_minimum_size = Vector2(350, 90)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="UI/ColorRect/MainMenuContainer/OptionsButton"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 26.0
+offset_right = 281.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 45
+text = "SETTINGS"
+
+[node name="MMQuitButton" type="Button" parent="UI/ColorRect/MainMenuContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="UI/ColorRect/MainMenuContainer/MMQuitButton"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 24.0
+offset_right = 218.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 45
+text = "QUIT"
+
+[connection signal="pressed" from="UI/ColorRect/MainMenuContainer/NewButton" to="UI/ColorRect/MainMenuContainer" method="_on_new_button_pressed"]
+[connection signal="pressed" from="UI/ColorRect/MainMenuContainer/LoadButton" to="UI/ColorRect/MainMenuContainer" method="_on_load_button_pressed"]
+[connection signal="pressed" from="UI/ColorRect/MainMenuContainer/OptionsButton" to="UI/ColorRect/MainMenuContainer" method="_on_options_button_pressed"]
+[connection signal="pressed" from="UI/ColorRect/MainMenuContainer/MMQuitButton" to="UI/ColorRect/MainMenuContainer" method="_on_mm_quit_button_pressed"]

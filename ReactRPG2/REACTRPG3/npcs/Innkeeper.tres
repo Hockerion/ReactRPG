@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://ih7jc75gp37m"]
+
+[ext_resource type="Script" path="res://npcs/NPC.gd" id="1"]
+[ext_resource type="Resource" uid="uid://ci8n2opbafrk5" path="res://items/Product.tres" id="1_cxaae"]
+
+[resource]
+script = ExtResource("1")
+npc_name = "Hilda"
+initial_dialog = "Hi traveler! Thanks for stopping by. The festival has brought in many visitors from far and wide, and I'm running out of supplies to provide for them. Can you be a dear and get me some soap from the Hawksburn Store? I'll send them the payment later so just get it for me."
+post_quest_dialog = "Thanks for getting the soap, Player! The Duchess of Tanjay and countess of Bacong, Joyaumme Dynsburry has just arrived and she'll be delighted to know that her favorite soap is ready. Thanks for the help! If you want, you could go outside Hibbard Gate to Vernon Village. I've heard that Old Man Juan has a generous reward for whoever finishes his task.  Do be careful, there are many dangers that lurk in the Wildlands outside the gate!"
+quest_item = ExtResource("1_cxaae")
