@@ -1,0 +1,1003 @@
+[gd_scene load_steps=15 format=3 uid="uid://c4dax2h8hj2o3"]
+
+[ext_resource type="FontFile" uid="uid://cnitqn7vm8ef3" path="res://fonts/PublicPixel.ttf" id="1_1mfmb"]
+[ext_resource type="Script" path="res://character_create.gd" id="1_fy4d6"]
+[ext_resource type="StyleBox" uid="uid://d3u7guwnuq2gy" path="res://themes/panels/wooden_border_panel.tres" id="2_1r44x"]
+[ext_resource type="Texture2D" uid="uid://b3tu700cnup2e" path="res://themes/textures/GUI_4x.png" id="3_08cae"]
+[ext_resource type="StyleBox" uid="uid://bpi0hs4sagwt7" path="res://themes/panels/fancy_paper_panel.tres" id="4_j5yy3"]
+[ext_resource type="Texture2D" uid="uid://cmhxtr3yymxur" path="res://themes/textures/Logo_Empty-removebg-preview.png" id="5_n3v88"]
+[ext_resource type="StyleBox" uid="uid://d14eowsvkpt63" path="res://themes/panels/wooden_frame.tres" id="6_mr8cv"]
+[ext_resource type="StyleBox" uid="uid://dwshvdklgh1yp" path="res://themes/buttons/gender_buttons.tres" id="7_r70jg"]
+[ext_resource type="Texture2D" uid="uid://db8fmhelxc8kp" path="res://themes/textures/Interface.png" id="9_aod1c"]
+[ext_resource type="StyleBox" uid="uid://c231d0syvagju" path="res://themes/buttons/button_normal.tres" id="10_pqrkx"]
+
+[sub_resource type="Theme" id="Theme_ictga"]
+default_font = ExtResource("1_1mfmb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_87fd1"]
+texture = ExtResource("3_08cae")
+texture_margin_left = 47.0
+texture_margin_top = 47.0
+texture_margin_right = 47.0
+texture_margin_bottom = 47.0
+region_rect = Rect2(129, 225, 125, 126)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rs26r"]
+texture = ExtResource("5_n3v88")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y0ada"]
+texture = ExtResource("9_aod1c")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 9.0
+texture_margin_bottom = 9.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="CharacterCreate" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ictga")
+script = ExtResource("1_fy4d6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.756863, 0.678431, 0.635294, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="Border" type="Panel" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_87fd1")
+
+[node name="CharNameLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 112.0
+offset_right = 560.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("4_j5yy3")
+text = "CHARACTER NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RaceLabel" type="Label" parent="ColorRect"]
+layout_mode = 2
+offset_left = 730.0
+offset_top = 112.0
+offset_right = 930.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("4_j5yy3")
+text = "RACE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClassLabel" type="Label" parent="ColorRect"]
+offset_left = 1065.0
+offset_top = 112.0
+offset_right = 1264.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("4_j5yy3")
+text = "CLASS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerInfoLabel" type="Label" parent="ColorRect"]
+offset_left = 1357.0
+offset_top = 112.0
+offset_right = 1811.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("4_j5yy3")
+text = "PLAYER INFORMATION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatPointsLabel" type="Label" parent="ColorRect"]
+offset_left = 184.0
+offset_top = 280.0
+offset_right = 560.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("4_j5yy3")
+text = "STAT POINTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SexLabel" type="Label" parent="ColorRect"]
+offset_left = 283.0
+offset_top = 827.0
+offset_right = 437.0
+offset_bottom = 879.0
+rotation = 6.28318
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("4_j5yy3")
+text = "SEX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NamePanel" type="Panel" parent="ColorRect"]
+layout_mode = 2
+offset_left = 93.0
+offset_top = 184.0
+offset_right = 641.0
+offset_bottom = 259.0
+theme_override_styles/panel = ExtResource("2_1r44x")
+
+[node name="NameMarginContainer" type="MarginContainer" parent="ColorRect/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="NameHContainer" type="HBoxContainer" parent="ColorRect/NamePanel/NameMarginContainer"]
+layout_mode = 2
+
+[node name="NameInput" type="LineEdit" parent="ColorRect/NamePanel/NameMarginContainer/NameHContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.337255, 0.337255, 0.337255, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+placeholder_text = "Enter a name..."
+max_length = 25
+flat = true
+caret_blink = true
+
+[node name="AttributesAllocationContainer" type="Panel" parent="ColorRect"]
+layout_mode = 2
+offset_left = 93.0
+offset_top = 352.0
+offset_right = 640.0
+offset_bottom = 820.0
+theme_override_styles/panel = ExtResource("2_1r44x")
+
+[node name="AttributesAllocationMarginContainer" type="MarginContainer" parent="ColorRect/AttributesAllocationContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="AttributesAllocationVContainer" type="VBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer"]
+layout_mode = 2
+
+[node name="AttributesAllocationHContainer" type="HBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AttributeLabelsVContainer" type="VBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer"]
+custom_minimum_size = Vector2(200, 2.08165e-12)
+layout_mode = 2
+
+[node name="StrengthLabel" type="Label" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeLabelsVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Strength"
+vertical_alignment = 1
+
+[node name="DexterityLabel" type="Label" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeLabelsVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Dexterity"
+vertical_alignment = 1
+
+[node name="WisdomLabel" type="Label" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeLabelsVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Wisdom"
+vertical_alignment = 1
+
+[node name="CharismaLabel" type="Label" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeLabelsVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Charisma"
+vertical_alignment = 1
+
+[node name="EnduranceLabel" type="Label" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeLabelsVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Endurance"
+vertical_alignment = 1
+
+[node name="LuckLabel" type="Label" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeLabelsVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Luck"
+vertical_alignment = 1
+
+[node name="AllocationBVContainer" type="VBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer"]
+layout_mode = 2
+
+[node name="HBoxContainerSTR" type="HBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="StrengthMinusB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerSTR"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "-"
+
+[node name="StrengthAddB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerSTR"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "+"
+
+[node name="HBoxContainerDXT" type="HBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="DexterityMinusB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerDXT"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "-"
+
+[node name="DexterityAddB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerDXT"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "+"
+
+[node name="HBoxContainerWIS" type="HBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="WisdomMinusB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerWIS"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "-"
+
+[node name="WisdomAddB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerWIS"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "+"
+
+[node name="HBoxContainerCHR" type="HBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="CharismaMinusB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerCHR"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "-"
+
+[node name="CharismaAddB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerCHR"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "+"
+
+[node name="HBoxContainerEND" type="HBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="EnduranceMinusB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerEND"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "-"
+
+[node name="EnduranceAddB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerEND"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "+"
+
+[node name="HBoxContainerLCK" type="HBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="LuckMinusB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerLCK"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "-"
+
+[node name="LuckAddB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerLCK"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "+"
+
+[node name="AttributeValues" type="VBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="STRvalue" type="Label" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeValues"]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DEXvalue" type="Label" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeValues"]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WISvalue" type="Label" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeValues"]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ENDvalue" type="Label" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeValues"]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CHRvalue" type="Label" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeValues"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LCKvalue" type="Label" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeValues"]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SexPanel" type="Panel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 873.0
+offset_right = 477.0
+offset_bottom = 997.0
+theme_override_styles/panel = ExtResource("2_1r44x")
+
+[node name="SexMarginContainer" type="MarginContainer" parent="ColorRect/SexPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="SexContainer" type="HBoxContainer" parent="ColorRect/SexPanel/SexMarginContainer"]
+layout_mode = 2
+
+[node name="MaleButton" type="Button" parent="ColorRect/SexPanel/SexMarginContainer/SexContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("7_r70jg")
+theme_override_styles/hover = ExtResource("7_r70jg")
+theme_override_styles/pressed = ExtResource("7_r70jg")
+theme_override_styles/focus = ExtResource("7_r70jg")
+
+[node name="FemaleButton" type="Button" parent="ColorRect/SexPanel/SexMarginContainer/SexContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_rs26r")
+theme_override_styles/hover = ExtResource("7_r70jg")
+theme_override_styles/pressed = ExtResource("7_r70jg")
+theme_override_styles/focus = ExtResource("7_r70jg")
+
+[node name="RaceBPanelContainer" type="Panel" parent="ColorRect"]
+layout_mode = 2
+offset_left = 680.0
+offset_top = 184.0
+offset_right = 980.0
+offset_bottom = 584.0
+theme_override_styles/panel = ExtResource("2_1r44x")
+
+[node name="RaceBMarginContainer" type="MarginContainer" parent="ColorRect/RaceBPanelContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Race" type="VBoxContainer" parent="ColorRect/RaceBPanelContainer/RaceBMarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="HumanB" type="Button" parent="ColorRect/RaceBPanelContainer/RaceBMarginContainer/Race"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+text = "Human"
+
+[node name="ElfB" type="Button" parent="ColorRect/RaceBPanelContainer/RaceBMarginContainer/Race"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+text = "Elf"
+
+[node name="DwarfB" type="Button" parent="ColorRect/RaceBPanelContainer/RaceBMarginContainer/Race"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+text = "Dwarf"
+
+[node name="BeastmanB" type="Button" parent="ColorRect/RaceBPanelContainer/RaceBMarginContainer/Race"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+text = "Beastman"
+
+[node name="ClassBPanelContainer" type="Panel" parent="ColorRect"]
+layout_mode = 2
+offset_left = 1015.0
+offset_top = 184.0
+offset_right = 1315.0
+offset_bottom = 584.0
+pivot_offset = Vector2(256, -36)
+theme_override_styles/panel = ExtResource("2_1r44x")
+
+[node name="ClassBMarginContainer" type="MarginContainer" parent="ColorRect/ClassBPanelContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Class" type="VBoxContainer" parent="ColorRect/ClassBPanelContainer/ClassBMarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="WarriorB" type="Button" parent="ColorRect/ClassBPanelContainer/ClassBMarginContainer/Class"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+text = "Warrior"
+
+[node name="MageB" type="Button" parent="ColorRect/ClassBPanelContainer/ClassBMarginContainer/Class"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+text = "Mage"
+
+[node name="RogueB" type="Button" parent="ColorRect/ClassBPanelContainer/ClassBMarginContainer/Class"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+text = "Rogue"
+
+[node name="PriestB" type="Button" parent="ColorRect/ClassBPanelContainer/ClassBMarginContainer/Class"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+text = "Priest"
+
+[node name="ClassDescPanelContainer" type="Panel" parent="ColorRect"]
+layout_mode = 2
+offset_left = 1015.0
+offset_top = 600.0
+offset_right = 1315.0
+offset_bottom = 821.0
+theme_override_styles/panel = ExtResource("2_1r44x")
+
+[node name="ClassDescMarginContainer" type="MarginContainer" parent="ColorRect/ClassDescPanelContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="ClassDescContainer" type="VBoxContainer" parent="ColorRect/ClassDescPanelContainer/ClassDescMarginContainer"]
+layout_mode = 2
+
+[node name="ClassDescTitleLabel" type="Label" parent="ColorRect/ClassDescPanelContainer/ClassDescMarginContainer/ClassDescContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Class Description: "
+
+[node name="ClassDescription" type="Label" parent="ColorRect/ClassDescPanelContainer/ClassDescMarginContainer/ClassDescContainer"]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Empty"
+autowrap_mode = 3
+
+[node name="RaceDescPanelContainer" type="Panel" parent="ColorRect"]
+layout_mode = 2
+offset_left = 680.0
+offset_top = 600.0
+offset_right = 984.0
+offset_bottom = 821.0
+theme_override_styles/panel = ExtResource("2_1r44x")
+
+[node name="RaceDescMarginContainer" type="MarginContainer" parent="ColorRect/RaceDescPanelContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="RaceDescContainer" type="VBoxContainer" parent="ColorRect/RaceDescPanelContainer/RaceDescMarginContainer"]
+layout_mode = 2
+
+[node name="RaceDescTitleLabel" type="Label" parent="ColorRect/RaceDescPanelContainer/RaceDescMarginContainer/RaceDescContainer"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Race Description: "
+
+[node name="RaceDescription" type="Label" parent="ColorRect/RaceDescPanelContainer/RaceDescMarginContainer/RaceDescContainer"]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Empty"
+autowrap_mode = 3
+
+[node name="PlayerInfoPanelContainer" type="Panel" parent="ColorRect"]
+layout_mode = 2
+offset_left = 1349.0
+offset_top = 184.0
+offset_right = 1820.0
+offset_bottom = 821.0
+theme_override_styles/panel = ExtResource("2_1r44x")
+
+[node name="PlayerInfoMarginContainer" type="MarginContainer" parent="ColorRect/PlayerInfoPanelContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="PlayerInfoHContainer" type="HBoxContainer" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer"]
+layout_mode = 2
+
+[node name="PlayerInfoContainer" type="VBoxContainer" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="NameLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Name: "
+
+[node name="SexLabel2" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Sex: "
+
+[node name="RaceLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Race: "
+
+[node name="ClassLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Class: "
+
+[node name="HealthLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Health: "
+
+[node name="ManaLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Mana: "
+
+[node name="AbilitiesLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Skills: "
+
+[node name="PlayerCurrentInfo" type="VBoxContainer" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="CurrentName" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Unknown"
+
+[node name="CurrentSex" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Unknown"
+
+[node name="CurrentRace" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Unknown"
+
+[node name="CurrentClass" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Classless
+"
+
+[node name="Totalhealth" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="TotalMana" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="SkillsContainer" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "None"
+
+[node name="BackCCButton" type="Button" parent="ColorRect"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+offset_left = 1264.0
+offset_top = 852.0
+offset_right = 1489.0
+offset_bottom = 980.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("10_pqrkx")
+theme_override_styles/hover = ExtResource("10_pqrkx")
+theme_override_styles/pressed = ExtResource("10_pqrkx")
+theme_override_styles/focus = ExtResource("10_pqrkx")
+text = "BACK"
+
+[node name="StartGameButton" type="Button" parent="ColorRect"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+offset_left = 1526.0
+offset_top = 852.0
+offset_right = 1817.0
+offset_bottom = 980.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("10_pqrkx")
+theme_override_styles/hover = ExtResource("10_pqrkx")
+theme_override_styles/pressed = ExtResource("10_pqrkx")
+theme_override_styles/focus = ExtResource("10_pqrkx")
+text = "START GAME"
+
+[connection signal="text_submitted" from="ColorRect/NamePanel/NameMarginContainer/NameHContainer/NameInput" to="." method="_on_name_input_text_submitted"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerSTR/StrengthMinusB" to="." method="_on_strength_minus_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerSTR/StrengthAddB" to="." method="_on_strength_add_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerDXT/DexterityMinusB" to="." method="_on_dexterity_minus_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerDXT/DexterityAddB" to="." method="_on_dexterity_add_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerWIS/WisdomMinusB" to="." method="_on_wisdom_minus_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerWIS/WisdomAddB" to="." method="_on_wisdom_add_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerCHR/CharismaMinusB" to="." method="_on_charisma_minus_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerCHR/CharismaAddB" to="." method="_on_charisma_add_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerEND/EnduranceMinusB" to="." method="_on_endurance_minus_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerEND/EnduranceAddB" to="." method="_on_endurance_add_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerLCK/LuckMinusB" to="." method="_on_luck_minus_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerLCK/LuckAddB" to="." method="_on_luck_add_b_pressed"]
+[connection signal="pressed" from="ColorRect/SexPanel/SexMarginContainer/SexContainer/MaleButton" to="." method="_on_male_button_pressed"]
+[connection signal="pressed" from="ColorRect/SexPanel/SexMarginContainer/SexContainer/FemaleButton" to="." method="_on_female_button_pressed"]
+[connection signal="pressed" from="ColorRect/RaceBPanelContainer/RaceBMarginContainer/Race/HumanB" to="." method="_on_human_b_pressed"]
+[connection signal="pressed" from="ColorRect/RaceBPanelContainer/RaceBMarginContainer/Race/ElfB" to="." method="_on_elf_b_pressed"]
+[connection signal="pressed" from="ColorRect/RaceBPanelContainer/RaceBMarginContainer/Race/DwarfB" to="." method="_on_dwarf_b_pressed"]
+[connection signal="pressed" from="ColorRect/RaceBPanelContainer/RaceBMarginContainer/Race/BeastmanB" to="." method="_on_beastman_b_pressed"]
+[connection signal="pressed" from="ColorRect/ClassBPanelContainer/ClassBMarginContainer/Class/WarriorB" to="." method="_on_warrior_b_pressed"]
+[connection signal="pressed" from="ColorRect/ClassBPanelContainer/ClassBMarginContainer/Class/MageB" to="." method="_on_mage_b_pressed"]
+[connection signal="pressed" from="ColorRect/ClassBPanelContainer/ClassBMarginContainer/Class/RogueB" to="." method="_on_rogue_b_pressed"]
+[connection signal="pressed" from="ColorRect/ClassBPanelContainer/ClassBMarginContainer/Class/PriestB" to="." method="_on_priest_b_pressed"]
+[connection signal="pressed" from="ColorRect/BackCCButton" to="." method="_on_back_cc_button_pressed"]
+[connection signal="pressed" from="ColorRect/StartGameButton" to="." method="_on_start_game_button_pressed"]

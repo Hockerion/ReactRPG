@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://bs0pq3u3gfiex"]
+
+[ext_resource type="Resource" uid="uid://dxqu432oqa8ie" path="res://items/Sword.tres" id="1_ii4wb"]
+[ext_resource type="Script" path="res://npcs/NPC.gd" id="1_mka8u"]
+
+[resource]
+script = ExtResource("1_mka8u")
+npc_name = "Chairman"
+initial_dialog = "Hi Player! It’s nice to see you again! Although I would like to chat, the recent festivities have made me extremely busy. Sir Daeschan of San Colao has lost his sword, Daeschan's Might, and needs you to find it before the tournament starts. Can you please tour around the village and find his sword? Thanks a lot!"
+post_quest_dialog = "My sincerest apologies player for making you find the sword. Sir Daeschan would be very pleased to know that you found his sword. This sword slew the great beast Tianacorex at Valencia's Hill, as well as slaying General Marcial at the battle of Pilar's Mourn. The sword's presence would surely inspire a new generation of swordsmen to rally for the Empire's cause. Thanks for the help and for visiting, I hope the rest of the festivities would be to your liking."
+quest_item = ExtResource("1_ii4wb")

@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://d3u7guwnuq2gy"]
+
+[ext_resource type="Texture2D" uid="uid://8qtfdc8ydvqs" path="res://themes/textures/UI books & more.png" id="1_30g0s"]
+
+[resource]
+texture = ExtResource("1_30g0s")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+region_rect = Rect2(656, 16, 48, 64)

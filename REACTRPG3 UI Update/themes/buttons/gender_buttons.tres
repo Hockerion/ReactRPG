@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dwshvdklgh1yp"]
+
+[ext_resource type="Texture2D" uid="uid://2re1qm488wri" path="res://themes/textures/Logo_Empty__2_-removebg-preview.png" id="1_p0n86"]
+
+[resource]
+texture = ExtResource("1_p0n86")
+expand_margin_left = 12.0
+expand_margin_top = 12.0
+expand_margin_right = 12.0
+expand_margin_bottom = 12.0

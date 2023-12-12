@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://w1j1trhmquqa"]
+
+[ext_resource type="Script" path="res://options_mm.gd" id="1_0lmsy"]
+
+[node name="OptionsMM" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0lmsy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.733333, 0.94902, 1)
+
+[node name="HSlider" type="HSlider" parent="ColorRect"]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 189.0
+offset_right = 905.0
+offset_bottom = 205.0
+
+[node name="Volume" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 267.0
+offset_top = 91.0
+offset_right = 477.0
+offset_bottom = 159.0
+theme_override_font_sizes/normal_font_size = 45
+text = "VOLUME"
+
+[node name="BackOptionsButton" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 513.0
+offset_right = 634.0
+offset_bottom = 584.0
+theme_override_font_sizes/font_size = 30
+text = "BACK"
+
+[connection signal="pressed" from="ColorRect/BackOptionsButton" to="." method="_on_back_options_button_pressed"]

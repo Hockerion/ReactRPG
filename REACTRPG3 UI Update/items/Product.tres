@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://ci8n2opbafrk5"]
+
+[ext_resource type="Script" path="res://items/Item.gd" id="1_tdo4a"]
+
+[resource]
+script = ExtResource("1_tdo4a")
+item_name = "Soap"
+item_type = 1

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cq4chv6knccjt"]
+
+[ext_resource type="Script" path="res://items/Item.gd" id="1_fb84g"]
+
+[resource]
+script = ExtResource("1_fb84g")
+item_name = "Housekey"
+item_type = 0

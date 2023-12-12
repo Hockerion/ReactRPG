@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://coplbpueiq13c"]
+
+[ext_resource type="Resource" uid="uid://y4601uuay870" path="res://items/Fruit.tres" id="1_0gkbm"]
+[ext_resource type="Script" path="res://npcs/NPC.gd" id="1_ch5jc"]
+
+[resource]
+script = ExtResource("1_ch5jc")
+npc_name = "Mom"
+initial_dialog = "Hi ‘Player! I hope you had a good sleep. Today's the big day so why don't you go out and explore the village and talk to our neighbors. Just take the key and open the door. Please do check the garden before you leave and get me a Papaya. Please also check if those pesky gophers are munching on my flowers again."
+post_quest_dialog = "Thank you for getting the papaya and for checking dear. That damn gopher’s gonna become dogfood when I’m done with my cooking. I have no need of anything to do at the moment so why don't you visit Jacob and Emily and see what they're doing."
+quest_item = ExtResource("1_0gkbm")

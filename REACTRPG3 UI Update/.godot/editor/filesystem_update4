@@ -1,0 +1,12 @@
+res://default_env.tres
+res://character_create.tscn
+res://themes/buttons/menu_button.tres
+res://themes/panels/wooden_border_panel.tres
+res://themes/panels/paper_panel.tres
+res://themes/panels/golden_border_panel.tres
+res://main_menu.tscn
+res://Game.tscn
+res://themes/panels/copy.tres
+res://themes/panels/fancy_paper_panel.tres
+res://character_create.gd
+res://themes/panels/wooden_frame.tres
