@@ -1,10 +1,10 @@
-MarginContainer
 Panel
+TextureRect
+ColorRect
+MarginContainer
+VBoxContainer
 Label
+HBoxContainer
 Button
 TextureButton
-ColorRect
-TextureRect
-VBoxContainer
 PanelContainer
-HBoxContainer

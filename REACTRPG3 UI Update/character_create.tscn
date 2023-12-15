@@ -1,15 +1,17 @@
-[gd_scene load_steps=15 format=3 uid="uid://c4dax2h8hj2o3"]
+[gd_scene load_steps=17 format=3 uid="uid://c4dax2h8hj2o3"]
 
 [ext_resource type="FontFile" uid="uid://cnitqn7vm8ef3" path="res://fonts/PublicPixel.ttf" id="1_1mfmb"]
 [ext_resource type="Script" path="res://character_create.gd" id="1_fy4d6"]
 [ext_resource type="StyleBox" uid="uid://d3u7guwnuq2gy" path="res://themes/panels/wooden_border_panel.tres" id="2_1r44x"]
 [ext_resource type="Texture2D" uid="uid://b3tu700cnup2e" path="res://themes/textures/GUI_4x.png" id="3_08cae"]
 [ext_resource type="StyleBox" uid="uid://bpi0hs4sagwt7" path="res://themes/panels/fancy_paper_panel.tres" id="4_j5yy3"]
-[ext_resource type="Texture2D" uid="uid://cmhxtr3yymxur" path="res://themes/textures/Logo_Empty-removebg-preview.png" id="5_n3v88"]
 [ext_resource type="StyleBox" uid="uid://d14eowsvkpt63" path="res://themes/panels/wooden_frame.tres" id="6_mr8cv"]
-[ext_resource type="StyleBox" uid="uid://dwshvdklgh1yp" path="res://themes/buttons/gender_buttons.tres" id="7_r70jg"]
+[ext_resource type="StyleBox" uid="uid://dwshvdklgh1yp" path="res://themes/buttons/gender_button_male.tres" id="7_pwqir"]
+[ext_resource type="StyleBox" uid="uid://ct5o1dkule5y3" path="res://themes/buttons/gender_button_female.tres" id="8_cmwhu"]
 [ext_resource type="Texture2D" uid="uid://db8fmhelxc8kp" path="res://themes/textures/Interface.png" id="9_aod1c"]
+[ext_resource type="StyleBox" uid="uid://bigslfu0pws52" path="res://themes/panels/paper_panel.tres" id="10_8yp6m"]
 [ext_resource type="StyleBox" uid="uid://c231d0syvagju" path="res://themes/buttons/button_normal.tres" id="10_pqrkx"]
+[ext_resource type="FontFile" uid="uid://d143ba2c10g1k" path="res://fonts/Retro Gaming.ttf" id="11_o6abo"]
 
 [sub_resource type="Theme" id="Theme_ictga"]
 default_font = ExtResource("1_1mfmb")
@@ -22,9 +24,6 @@ texture_margin_right = 47.0
 texture_margin_bottom = 47.0
 region_rect = Rect2(129, 225, 125, 126)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rs26r"]
-texture = ExtResource("5_n3v88")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y0ada"]
 texture = ExtResource("9_aod1c")
 texture_margin_left = 9.0
@@ -32,6 +31,8 @@ texture_margin_top = 9.0
 texture_margin_right = 9.0
 texture_margin_bottom = 9.0
 region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="Theme" id="Theme_f2pou"]
 
 [node name="CharacterCreate" type="Control"]
 layout_mode = 3
@@ -93,6 +94,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ClassLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
 offset_left = 1065.0
 offset_top = 112.0
 offset_right = 1264.0
@@ -104,6 +106,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PlayerInfoLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
 offset_left = 1357.0
 offset_top = 112.0
 offset_right = 1811.0
@@ -115,6 +118,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="StatPointsLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
 offset_left = 184.0
 offset_top = 280.0
 offset_right = 560.0
@@ -126,10 +130,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SexLabel" type="Label" parent="ColorRect"]
-offset_left = 283.0
-offset_top = 827.0
-offset_right = 437.0
-offset_bottom = 879.0
+layout_mode = 0
+offset_left = 448.0
+offset_top = 824.0
+offset_right = 602.0
+offset_bottom = 876.0
 rotation = 6.28318
 theme_override_font_sizes/font_size = 23
 theme_override_styles/normal = ExtResource("4_j5yy3")
@@ -165,6 +170,7 @@ layout_mode = 2
 [node name="NameInput" type="LineEdit" parent="ColorRect/NamePanel/NameMarginContainer/NameHContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Enter your character's name "
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0.337255, 0.337255, 0.337255, 1)
@@ -267,10 +273,10 @@ custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = ExtResource("6_mr8cv")
 theme_override_styles/hover = ExtResource("6_mr8cv")
@@ -283,10 +289,10 @@ custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = ExtResource("6_mr8cv")
 theme_override_styles/hover = ExtResource("6_mr8cv")
@@ -303,10 +309,10 @@ theme_override_constants/separation = 40
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = ExtResource("6_mr8cv")
 theme_override_styles/hover = ExtResource("6_mr8cv")
@@ -318,10 +324,10 @@ text = "-"
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = ExtResource("6_mr8cv")
 theme_override_styles/hover = ExtResource("6_mr8cv")
@@ -338,10 +344,10 @@ theme_override_constants/separation = 40
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = ExtResource("6_mr8cv")
 theme_override_styles/hover = ExtResource("6_mr8cv")
@@ -353,45 +359,10 @@ text = "-"
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = ExtResource("6_mr8cv")
-theme_override_styles/hover = ExtResource("6_mr8cv")
-theme_override_styles/pressed = ExtResource("6_mr8cv")
-theme_override_styles/focus = ExtResource("6_mr8cv")
-text = "+"
-
-[node name="HBoxContainerCHR" type="HBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer"]
-custom_minimum_size = Vector2(2.08165e-12, 70)
-layout_mode = 2
-theme_override_constants/separation = 40
-
-[node name="CharismaMinusB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerCHR"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = ExtResource("6_mr8cv")
-theme_override_styles/hover = ExtResource("6_mr8cv")
-theme_override_styles/pressed = ExtResource("6_mr8cv")
-theme_override_styles/focus = ExtResource("6_mr8cv")
-text = "-"
-
-[node name="CharismaAddB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerCHR"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = ExtResource("6_mr8cv")
 theme_override_styles/hover = ExtResource("6_mr8cv")
@@ -408,10 +379,10 @@ theme_override_constants/separation = 40
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = ExtResource("6_mr8cv")
 theme_override_styles/hover = ExtResource("6_mr8cv")
@@ -423,10 +394,45 @@ text = "-"
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "+"
+
+[node name="HBoxContainerCHR" type="HBoxContainer" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="CharismaMinusB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerCHR"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("6_mr8cv")
+theme_override_styles/hover = ExtResource("6_mr8cv")
+theme_override_styles/pressed = ExtResource("6_mr8cv")
+theme_override_styles/focus = ExtResource("6_mr8cv")
+text = "-"
+
+[node name="CharismaAddB" type="Button" parent="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerCHR"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = ExtResource("6_mr8cv")
 theme_override_styles/hover = ExtResource("6_mr8cv")
@@ -443,10 +449,10 @@ theme_override_constants/separation = 40
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = ExtResource("6_mr8cv")
 theme_override_styles/hover = ExtResource("6_mr8cv")
@@ -458,10 +464,10 @@ text = "-"
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = ExtResource("6_mr8cv")
 theme_override_styles/hover = ExtResource("6_mr8cv")
@@ -532,9 +538,9 @@ vertical_alignment = 1
 
 [node name="SexPanel" type="Panel" parent="ColorRect"]
 layout_mode = 0
-offset_left = 245.0
+offset_left = 409.0
 offset_top = 873.0
-offset_right = 477.0
+offset_right = 641.0
 offset_bottom = 997.0
 theme_override_styles/panel = ExtResource("2_1r44x")
 
@@ -556,18 +562,20 @@ layout_mode = 2
 [node name="MaleButton" type="Button" parent="ColorRect/SexPanel/SexMarginContainer/SexContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/normal = ExtResource("7_r70jg")
-theme_override_styles/hover = ExtResource("7_r70jg")
-theme_override_styles/pressed = ExtResource("7_r70jg")
-theme_override_styles/focus = ExtResource("7_r70jg")
+tooltip_text = "MALE"
+theme_override_styles/normal = ExtResource("7_pwqir")
+theme_override_styles/hover = ExtResource("7_pwqir")
+theme_override_styles/pressed = ExtResource("7_pwqir")
+theme_override_styles/focus = ExtResource("7_pwqir")
 
 [node name="FemaleButton" type="Button" parent="ColorRect/SexPanel/SexMarginContainer/SexContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxTexture_rs26r")
-theme_override_styles/hover = ExtResource("7_r70jg")
-theme_override_styles/pressed = ExtResource("7_r70jg")
-theme_override_styles/focus = ExtResource("7_r70jg")
+tooltip_text = "FEMALE "
+theme_override_styles/normal = ExtResource("8_cmwhu")
+theme_override_styles/hover = ExtResource("8_cmwhu")
+theme_override_styles/pressed = ExtResource("8_cmwhu")
+theme_override_styles/focus = ExtResource("8_cmwhu")
 
 [node name="RaceBPanelContainer" type="Panel" parent="ColorRect"]
 layout_mode = 2
@@ -601,10 +609,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+theme_override_styles/hover = ExtResource("10_8yp6m")
+theme_override_styles/pressed = ExtResource("10_8yp6m")
 text = "Human"
 
 [node name="ElfB" type="Button" parent="ColorRect/RaceBPanelContainer/RaceBMarginContainer/Race"]
@@ -614,10 +625,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+theme_override_styles/hover = ExtResource("10_8yp6m")
+theme_override_styles/pressed = ExtResource("10_8yp6m")
 text = "Elf"
 
 [node name="DwarfB" type="Button" parent="ColorRect/RaceBPanelContainer/RaceBMarginContainer/Race"]
@@ -627,10 +641,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+theme_override_styles/hover = ExtResource("10_8yp6m")
+theme_override_styles/pressed = ExtResource("10_8yp6m")
 text = "Dwarf"
 
 [node name="BeastmanB" type="Button" parent="ColorRect/RaceBPanelContainer/RaceBMarginContainer/Race"]
@@ -640,10 +657,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+theme_override_styles/hover = ExtResource("10_8yp6m")
+theme_override_styles/pressed = ExtResource("10_8yp6m")
 text = "Beastman"
 
 [node name="ClassBPanelContainer" type="Panel" parent="ColorRect"]
@@ -679,10 +699,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+theme_override_styles/hover = ExtResource("10_8yp6m")
+theme_override_styles/pressed = ExtResource("10_8yp6m")
 text = "Warrior"
 
 [node name="MageB" type="Button" parent="ColorRect/ClassBPanelContainer/ClassBMarginContainer/Class"]
@@ -692,10 +715,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+theme_override_styles/hover = ExtResource("10_8yp6m")
+theme_override_styles/pressed = ExtResource("10_8yp6m")
 text = "Mage"
 
 [node name="RogueB" type="Button" parent="ColorRect/ClassBPanelContainer/ClassBMarginContainer/Class"]
@@ -705,10 +731,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+theme_override_styles/hover = ExtResource("10_8yp6m")
+theme_override_styles/pressed = ExtResource("10_8yp6m")
 text = "Rogue"
 
 [node name="PriestB" type="Button" parent="ColorRect/ClassBPanelContainer/ClassBMarginContainer/Class"]
@@ -718,56 +747,21 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_y0ada")
+theme_override_styles/hover = ExtResource("10_8yp6m")
+theme_override_styles/pressed = ExtResource("10_8yp6m")
 text = "Priest"
-
-[node name="ClassDescPanelContainer" type="Panel" parent="ColorRect"]
-layout_mode = 2
-offset_left = 1015.0
-offset_top = 600.0
-offset_right = 1315.0
-offset_bottom = 821.0
-theme_override_styles/panel = ExtResource("2_1r44x")
-
-[node name="ClassDescMarginContainer" type="MarginContainer" parent="ColorRect/ClassDescPanelContainer"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
-
-[node name="ClassDescContainer" type="VBoxContainer" parent="ColorRect/ClassDescPanelContainer/ClassDescMarginContainer"]
-layout_mode = 2
-
-[node name="ClassDescTitleLabel" type="Label" parent="ColorRect/ClassDescPanelContainer/ClassDescMarginContainer/ClassDescContainer"]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
-text = "Class Description: "
-
-[node name="ClassDescription" type="Label" parent="ColorRect/ClassDescPanelContainer/ClassDescMarginContainer/ClassDescContainer"]
-layout_mode = 2
-size_flags_vertical = 7
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
-text = "Empty"
-autowrap_mode = 3
 
 [node name="RaceDescPanelContainer" type="Panel" parent="ColorRect"]
 layout_mode = 2
 offset_left = 680.0
 offset_top = 600.0
 offset_right = 984.0
-offset_bottom = 821.0
+offset_bottom = 997.0
 theme_override_styles/panel = ExtResource("2_1r44x")
 
 [node name="RaceDescMarginContainer" type="MarginContainer" parent="ColorRect/RaceDescPanelContainer"]
@@ -796,9 +790,51 @@ text = "Race Description: "
 layout_mode = 2
 size_flags_vertical = 7
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
+theme_override_fonts/font = ExtResource("11_o6abo")
+theme_override_font_sizes/font_size = 16
 text = "Empty"
 autowrap_mode = 3
+clip_text = true
+
+[node name="ClassDescPanelContainer" type="Panel" parent="ColorRect"]
+layout_mode = 2
+offset_left = 1015.0
+offset_top = 600.0
+offset_right = 1315.0
+offset_bottom = 992.0
+theme_override_styles/panel = ExtResource("2_1r44x")
+
+[node name="ClassDescMarginContainer" type="MarginContainer" parent="ColorRect/ClassDescPanelContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="ClassDescContainer" type="VBoxContainer" parent="ColorRect/ClassDescPanelContainer/ClassDescMarginContainer"]
+layout_mode = 2
+
+[node name="ClassDescTitleLabel" type="Label" parent="ColorRect/ClassDescPanelContainer/ClassDescMarginContainer/ClassDescContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Class Description: "
+
+[node name="ClassDescription" type="Label" parent="ColorRect/ClassDescPanelContainer/ClassDescMarginContainer/ClassDescContainer"]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_o6abo")
+theme_override_font_sizes/font_size = 16
+text = "Empty"
+autowrap_mode = 3
+clip_text = true
 
 [node name="PlayerInfoPanelContainer" type="Panel" parent="ColorRect"]
 layout_mode = 2
@@ -820,136 +856,155 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="PlayerInfoHContainer" type="HBoxContainer" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer"]
+[node name="PlayerInfoVBoxContainer" type="VBoxContainer" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="CurrentNameContainer" type="HBoxContainer" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer"]
 layout_mode = 2
 
-[node name="PlayerInfoContainer" type="VBoxContainer" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 20
-
-[node name="NameLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
-custom_minimum_size = Vector2(0, 30)
+[node name="NameLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/CurrentNameContainer"]
+custom_minimum_size = Vector2(144, 30)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 18
 text = "Name: "
 
-[node name="SexLabel2" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Sex: "
-
-[node name="RaceLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Race: "
-
-[node name="ClassLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Class: "
-
-[node name="HealthLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Health: "
-
-[node name="ManaLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Mana: "
-
-[node name="AbilitiesLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerInfoContainer"]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Skills: "
-
-[node name="PlayerCurrentInfo" type="VBoxContainer" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer"]
+[node name="CurrentName" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/CurrentNameContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 30)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Unknown"
+autowrap_mode = 3
+
+[node name="PlayerInfoHContainer" type="HBoxContainer" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer"]
+layout_mode = 2
+
+[node name="PlayerInfoContainer" type="VBoxContainer" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer"]
+layout_mode = 2
+theme = SubResource("Theme_f2pou")
 theme_override_constants/separation = 20
 
-[node name="CurrentName" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
-custom_minimum_size = Vector2(60, 30)
+[node name="SexLabel2" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Sex: "
+
+[node name="RaceLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+tooltip_text = "Your character's race"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Race: "
+
+[node name="ClassLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+tooltip_text = "Your character's profession"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Class: "
+
+[node name="HealthLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+tooltip_text = "Your character's race total amount of HP"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Health: "
+
+[node name="ManaLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+tooltip_text = "Your character's total amount of MP"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Mana: "
+
+[node name="AbilitiesLabel" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerInfoContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+tooltip_text = "Your character's skill set"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Skills: "
+
+[node name="PlayerCurrentInfo" type="VBoxContainer" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme = SubResource("Theme_f2pou")
+theme_override_constants/separation = 20
+
+[node name="CurrentSex" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+custom_minimum_size = Vector2(2.08165e-12, 30)
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 18
 text = "Unknown"
 
-[node name="CurrentSex" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
-custom_minimum_size = Vector2(60, 30)
-layout_mode = 2
-size_flags_vertical = 1
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Unknown"
-
-[node name="CurrentRace" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+[node name="CurrentRace" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 18
 text = "Unknown"
 
-[node name="CurrentClass" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+[node name="CurrentClass" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 18
 text = "Classless
 "
 
-[node name="Totalhealth" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+[node name="Totalhealth" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 18
 text = "0"
 
-[node name="TotalMana" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+[node name="TotalMana" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 18
 text = "0"
 
-[node name="SkillsContainer" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo"]
+[node name="SkillsContainer" type="Label" parent="ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 18
 text = "None"
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 2
 
 [node name="BackCCButton" type="Button" parent="ColorRect"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
-offset_left = 1264.0
+offset_left = 94.0
 offset_top = 852.0
-offset_right = 1489.0
+offset_right = 319.0
 offset_bottom = 980.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = ExtResource("10_pqrkx")
 theme_override_styles/hover = ExtResource("10_pqrkx")
@@ -965,16 +1020,35 @@ offset_top = 852.0
 offset_right = 1817.0
 offset_bottom = 980.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = ExtResource("10_pqrkx")
 theme_override_styles/hover = ExtResource("10_pqrkx")
 theme_override_styles/pressed = ExtResource("10_pqrkx")
 theme_override_styles/focus = ExtResource("10_pqrkx")
 text = "START GAME"
+
+[node name="Panel" type="Panel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = -848.0
+offset_right = 760.0
+offset_bottom = -552.0
+
+[node name="CharImage" type="TextureRect" parent="ColorRect/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.125
+anchor_top = 1.625
+anchor_right = -3.125
+anchor_bottom = 1.625
+offset_left = 320.0
+offset_top = -400.0
+offset_right = 360.0
+offset_bottom = -360.0
 
 [connection signal="text_submitted" from="ColorRect/NamePanel/NameMarginContainer/NameHContainer/NameInput" to="." method="_on_name_input_text_submitted"]
 [connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerSTR/StrengthMinusB" to="." method="_on_strength_minus_b_pressed"]
@@ -983,10 +1057,10 @@ text = "START GAME"
 [connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerDXT/DexterityAddB" to="." method="_on_dexterity_add_b_pressed"]
 [connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerWIS/WisdomMinusB" to="." method="_on_wisdom_minus_b_pressed"]
 [connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerWIS/WisdomAddB" to="." method="_on_wisdom_add_b_pressed"]
-[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerCHR/CharismaMinusB" to="." method="_on_charisma_minus_b_pressed"]
-[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerCHR/CharismaAddB" to="." method="_on_charisma_add_b_pressed"]
 [connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerEND/EnduranceMinusB" to="." method="_on_endurance_minus_b_pressed"]
 [connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerEND/EnduranceAddB" to="." method="_on_endurance_add_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerCHR/CharismaMinusB" to="." method="_on_charisma_minus_b_pressed"]
+[connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerCHR/CharismaAddB" to="." method="_on_charisma_add_b_pressed"]
 [connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerLCK/LuckMinusB" to="." method="_on_luck_minus_b_pressed"]
 [connection signal="pressed" from="ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AllocationBVContainer/HBoxContainerLCK/LuckAddB" to="." method="_on_luck_add_b_pressed"]
 [connection signal="pressed" from="ColorRect/SexPanel/SexMarginContainer/SexContainer/MaleButton" to="." method="_on_male_button_pressed"]

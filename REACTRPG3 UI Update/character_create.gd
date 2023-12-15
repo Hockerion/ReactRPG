@@ -13,21 +13,21 @@ extends Control
 
 ##### VARIABLES AND CONNECTIONS #####
 
-@onready var NME_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo/CurrentName
+@onready var NME_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/CurrentNameContainer/CurrentName
 @onready var STR_label = $ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeValues/STRvalue
 @onready var DEX_label = $ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeValues/DEXvalue
 @onready var WIS_label = $ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeValues/WISvalue
 @onready var END_label = $ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeValues/ENDvalue
 @onready var CHR_label = $ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeValues/CHRvalue
 @onready var LCK_label = $ColorRect/AttributesAllocationContainer/AttributesAllocationMarginContainer/AttributesAllocationVContainer/AttributesAllocationHContainer/AttributeValues/LCKvalue
-@onready var RCE_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo/CurrentRace
-@onready var PRF_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo/CurrentClass
+@onready var RCE_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerCurrentInfo/CurrentRace
+@onready var PRF_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerCurrentInfo/CurrentClass
 @onready var RCE_Desc_label = $ColorRect/RaceDescPanelContainer/RaceDescMarginContainer/RaceDescContainer/RaceDescription
 @onready var PRF_Desc_label = $ColorRect/ClassDescPanelContainer/ClassDescMarginContainer/ClassDescContainer/ClassDescription
-@onready var SEX_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo/CurrentSex
-@onready var HLT_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo/Totalhealth
-@onready var MNA_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo/TotalMana
-@onready var SKL_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoHContainer/PlayerCurrentInfo/SkillsContainer   
+@onready var SEX_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerCurrentInfo/CurrentSex
+@onready var HLT_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerCurrentInfo/Totalhealth
+@onready var MNA_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/PlayerInfoHContainer/PlayerCurrentInfo/TotalMana
+@onready var SKL_label = $ColorRect/PlayerInfoPanelContainer/PlayerInfoMarginContainer/PlayerInfoVBoxContainer/SkillsContainer   
 @onready var ChImage = $ColorRect/Panel/CharImage
 
 
@@ -270,7 +270,7 @@ func mana_assignment() -> void:
 			Character.mana += 10
 		"priest":
 			Character.mana += 15
-	MNA_ label.text = str(Character.mana)
+	MNA_label.text = str(Character.mana)
 
 
 

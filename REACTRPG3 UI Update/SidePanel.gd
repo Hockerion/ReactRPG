@@ -2,41 +2,41 @@ extends PanelContainer
 
 ##### ROOMS #####
 
-@onready var room_name = $MarginContainer/SidePanel/Rows/TitleSection/RoomNameLabel
-@onready var room_description = $MarginContainer/SidePanel/Rows/RoomDescriptionLabel
+@onready var room_name = $MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows/TitleSection/RoomNameLabel
+@onready var room_description = $MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows/TitleSection/RoomDescriptionLabel
 
 ##### FUNCTIONS #####
 
-@onready var exit_label = $MarginContainer/SidePanel/Rows/ListArea/ExitLabel
-@onready var npc_label = $MarginContainer/SidePanel/Rows/ListArea/NpcLabel
-@onready var item_label = $MarginContainer/SidePanel/Rows/ListArea/ExitLabel
+@onready var exit_label = $MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows/ListArea/ItemLabel
+@onready var npc_label = $MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows/ListArea/NpcLabel
+@onready var item_label = $MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows/ListArea/ExitLabel
 
 ##### CHARACTER #####
 
 # PERSONAL INFO #
 
-@onready var NME_labelSP = $MarginContainer/SidePanel/CharInfo/HBoxContainer/PerInfovalues/SPCNameval
-@onready var SEX_labelSP = $MarginContainer/SidePanel/CharInfo/HBoxContainer/PerInfovalues/SPCSexval
-@onready var RCE_labelSP = $MarginContainer/SidePanel/CharInfo/HBoxContainer/PerInfovalues/SPRaceval
-@onready var PRF_labelSP = $MarginContainer/SidePanel/CharInfo/HBoxContainer/PerInfovalues/SPClassval
-@onready var HLT_labelSP = $MarginContainer/SidePanel/CharInfo/HBoxContainer/PerInfovalues/SPCHealthval
-@onready var MNA_labelSP = $MarginContainer/SidePanel/CharInfo/HBoxContainer/PerInfovalues/SPCManaval
+@onready var NME_labelSP = $MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PerInfovalues/SPCNameval
+@onready var SEX_labelSP = $MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PerInfovalues/SPCSexval
+@onready var RCE_labelSP = $MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PerInfovalues/SPRaceval
+@onready var PRF_labelSP = $MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PerInfovalues/SPClassval
+@onready var HLT_labelSP = $MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PerInfovalues/SPCHealthval
+@onready var MNA_labelSP = $MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PerInfovalues/SPCManaval
 
 # ATTRIBUTES #
 
-@onready var STR_labelSP = $MarginContainer/SidePanel/CharInfo/HBoxContainer/AttrValue/SPSTRval
-@onready var DEX_labelSP = $MarginContainer/SidePanel/CharInfo/HBoxContainer/AttrValue/SPDXTval
-@onready var WIS_labelSP = $MarginContainer/SidePanel/CharInfo/HBoxContainer/AttrValue/SPWISval
-@onready var END_labelSP = $MarginContainer/SidePanel/CharInfo/HBoxContainer/AttrValue/SPENDval
-@onready var CHR_labelSP = $MarginContainer/SidePanel/CharInfo/HBoxContainer/AttrValue/SPCHRval
-@onready var LCK_labelSP = $MarginContainer/SidePanel/CharInfo/HBoxContainer/AttrValue/SPLCKval
+@onready var STR_labelSP = $MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/AttrValue/SPSTRval
+@onready var DEX_labelSP = $MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/AttrValue/SPDXTval
+@onready var WIS_labelSP = $MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/AttrValue/SPWISval
+@onready var END_labelSP = $MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/AttrValue/SPENDval
+@onready var CHR_labelSP = $MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/AttrValue/SPCHRval
+@onready var LCK_labelSP = $MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/AttrValue/SPLCKval
 
 # ABILITY #
 
-@onready var SKL1_Desc_labelSP = $MarginContainer/SidePanel/CharInfo/SPAbilities/SkillsDefSP/Abilitydef1SP
-@onready var SKL2_Desc_labelSP = $MarginContainer/SidePanel/CharInfo/SPAbilities/SkillsDefSP/Abilitydef2SP
-@onready var SKL3_Desc_labelSP = $MarginContainer/SidePanel/CharInfo/SPAbilities/SkillsDefSP/Abilitydef3SP
-@onready var SKL4_Desc_labelSP = $MarginContainer/SidePanel/CharInfo/SPAbilities/SkillsDefSP/Abilitydef4SP
+@onready var SKL1_Desc_labelSP = $MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities/SkillssetSP/Ability1SP
+@onready var SKL2_Desc_labelSP = $MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities/SkillssetSP/Ability2SP
+@onready var SKL3_Desc_labelSP = $MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities/SkillssetSP/Ability3SP
+@onready var SKL4_Desc_labelSP = $MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities/SkillssetSP/Ability4SP
 
 
 func handle_room_changed(new_room):

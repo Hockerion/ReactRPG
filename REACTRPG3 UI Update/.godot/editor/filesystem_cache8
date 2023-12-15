@@ -1,27 +1,27 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702301373
-character_create.gd::GDScript::-1::1702301205::0::1::::<>Control<>::
-character_create.tscn::PackedScene::6814553469864326780::1702300794::0::1::::<><>::uid://cnitqn7vm8ef3::::res://fonts/PublicPixel.ttf<>res://character_create.gd<>uid://d3u7guwnuq2gy::::res://themes/panels/wooden_border_panel.tres<>uid://b3tu700cnup2e::::res://themes/textures/GUI_4x.png<>uid://bpi0hs4sagwt7::::res://themes/panels/fancy_paper_panel.tres<>uid://cmhxtr3yymxur::::res://themes/textures/Logo_Empty-removebg-preview.png<>uid://d14eowsvkpt63::::res://themes/panels/wooden_frame.tres<>uid://dwshvdklgh1yp::::res://themes/buttons/gender_buttons.tres<>uid://db8fmhelxc8kp::::res://themes/textures/Interface.png<>uid://c231d0syvagju::::res://themes/buttons/button_normal.tres
+::res://::1702658096
+character_create.gd::GDScript::-1::1702555741::0::1::::<>Control<>::
+character_create.tscn::PackedScene::6814553469864326780::1702658096::0::1::::<><>::uid://cnitqn7vm8ef3::::res://fonts/PublicPixel.ttf<>res://character_create.gd<>uid://d3u7guwnuq2gy::::res://themes/panels/wooden_border_panel.tres<>uid://b3tu700cnup2e::::res://themes/textures/GUI_4x.png<>uid://bpi0hs4sagwt7::::res://themes/panels/fancy_paper_panel.tres<>uid://d14eowsvkpt63::::res://themes/panels/wooden_frame.tres<>uid://dwshvdklgh1yp::::res://themes/buttons/gender_button_male.tres<>uid://ct5o1dkule5y3::::res://themes/buttons/gender_button_female.tres<>uid://db8fmhelxc8kp::::res://themes/textures/Interface.png<>uid://bigslfu0pws52::::res://themes/panels/paper_panel.tres<>uid://c231d0syvagju::::res://themes/buttons/button_normal.tres<>uid://d143ba2c10g1k::::res://fonts/Retro Gaming.ttf
 CommandProcessor.gd::GDScript::-1::1699662122::0::1::::<>Node<>::
-default_env.tres::Environment::523071189241475339::1702301205::0::1::::<><>::
+dark_panel.tres::StyleBoxTexture::5313519653907138728::1702649758::0::1::::<><>::uid://drt0a1dd85lf0
+default_env.tres::Environment::523071189241475339::1702658429::0::1::::<><>::
 Game.gd::GDScript::-1::1699662122::0::1::::<>Control<>::
-Game.tscn::PackedScene::8012549413015482183::1702300487::0::1::::<><>::res://input/Input.gd<>res://fonts/plex_mono_28.tres<>res://Game.gd<>res://CommandProcessor.gd<>res://rooms/GameRoom.tscn<>res://rooms/RoomManager.gd<>res://Player.gd<>uid://t8earpqt4r2x::::res://GameInfo.tscn<>uid://dogws7ymqkh3q::::res://SidePanel.tscn
+Game.tscn::PackedScene::8012549413015482183::1702658429::0::1::::<><>::res://input/Input.gd<>uid://d143ba2c10g1k::::res://fonts/Retro Gaming.ttf<>res://fonts/plex_mono_28.tres<>res://Game.gd<>res://CommandProcessor.gd<>res://rooms/GameRoom.tscn<>res://rooms/RoomManager.gd<>res://Player.gd<>uid://chx55lukc6h25::::res://dark_panel.tres<>uid://t8earpqt4r2x::::res://GameInfo.tscn<>uid://dogws7ymqkh3q::::res://SidePanel.tscn<>uid://d3u7guwnuq2gy::::res://themes/panels/wooden_border_panel.tres<>uid://hhxthy0vowmr::::res://themes/buttons/menu_button (2).tres
 GameInfo.gd::GDScript::-1::1699662122::0::1::::<>PanelContainer<>::
-GameInfo.tscn::PackedScene::1401956279800190025::1699662122::0::1::::<><>::res://GameInfo.gd<>res://main_panel.tres
+GameInfo.tscn::PackedScene::1401956279800190025::1702658096::0::1::::<><>::res://GameInfo.gd<>uid://cmterkhf1fr0p::::res://themes/panels/main_panel.tres
 icon.png::CompressedTexture2D::1760825514051516923::1699662122::1702101179::1::::<><>::
 MainMenuButtons.gd::GDScript::-1::1702128928::0::1::::<>VBoxContainer<>::
-main_menu.tscn::PackedScene::7453031084540575758::1702301205::0::1::::<><>::uid://cnitqn7vm8ef3::::res://fonts/PublicPixel.ttf<>uid://nna4iwlvosuh::::res://themes/textures/bg1.jpg<>uid://de1d4aqa16hgh::::res://themes/buttons/menu_button.tres<>res://MainMenuButtons.gd<>uid://dk7ly84b34ua2::::res://themes/panels/wooden_border_empty.tres
-main_panel.tres::StyleBoxFlat::-1::1699662122::0::1::::<><>::
+main_menu.tscn::PackedScene::7453031084540575758::1702658096::0::1::::<><>::uid://cnitqn7vm8ef3::::res://fonts/PublicPixel.ttf<>uid://nna4iwlvosuh::::res://themes/textures/bg1.jpg<>uid://de1d4aqa16hgh::::res://themes/buttons/menu_button.tres<>res://MainMenuButtons.gd<>uid://dk7ly84b34ua2::::res://themes/panels/wooden_border_empty.tres<>uid://bigslfu0pws52::::res://themes/panels/paper_panel.tres
 options_mm.gd::GDScript::-1::1699662122::0::1::::<>Control<>::
-options_mm.tscn::PackedScene::1598422289758756432::1699662122::0::1::::<><>::res://options_mm.gd
+options_mm.tscn::PackedScene::1598422289758756432::1702658096::0::1::::<><>::res://options_mm.gd<>uid://cnitqn7vm8ef3::::res://fonts/PublicPixel.ttf<>uid://nna4iwlvosuh::::res://themes/textures/bg1.jpg<>uid://dk7ly84b34ua2::::res://themes/panels/wooden_border_empty.tres<>uid://c231d0syvagju::::res://themes/buttons/button_normal.tres
 PauseScreen.gd::GDScript::-1::1699662122::0::1::::<>CanvasLayer<>::
 pause_screen.tscn::PackedScene::2903466036673423241::1699662122::0::1::::<><>::res://PauseScreen.gd
 Player.gd::GDScript::-1::1699662122::0::1::::Player<>Node<>::
 PlayerData.gd::GDScript::-1::1699662122::0::1::::PlayerData<>Resource<>::
 README.md::TextFile::-1::1699662122::0::1::::<><>::
-save.json::JSON::-1::1699662122::0::1::::<><>::
-SidePanel.gd::GDScript::-1::1699662122::0::1::::<>PanelContainer<>::
-SidePanel.tscn::PackedScene::8155661765056784692::1699662122::0::1::::<><>::res://main_panel.tres<>res://fonts/plex_mono_24.tres<>res://fonts/plex_mono_16.tres<>res://SidePanel.gd
+save.json::JSON::-1::1702651012::0::1::::<><>::
+SidePanel.gd::GDScript::-1::1702657169::0::1::::<>PanelContainer<>::
+SidePanel.tscn::PackedScene::8155661765056784692::1702658096::0::1::::<><>::uid://d143ba2c10g1k::::res://fonts/Retro Gaming.ttf<>uid://chx55lukc6h25::::res://dark_panel.tres<>res://SidePanel.gd<>uid://d3u7guwnuq2gy::::res://themes/panels/wooden_border_panel.tres
 ::res://addons/::1699662122
 ::res://addons/GPTIntegration/::1699662122
 Chat.tscn::PackedScene::1773702815319108865::1699662122::0::1::::<><>::
@@ -29,13 +29,16 @@ ChatBubble.tscn::PackedScene::4835911937297589263::1699662122::0::1::::<><>::
 GPTIntegration.gd::GDScript::-1::1699662122::0::1::::<>EditorPlugin<>::
 plugin.cfg::TextFile::-1::1699662122::0::1::::<><>::
 SettingsWindow.tscn::PackedScene::7889180966212432454::1699662122::0::1::::<><>::
-::res://fonts/::1702121563
+::res://fonts/::1702657678
+588a6507d06f6719692a2d15.png::CompressedTexture2D::6944411610879269879::1702657678::1702657678::1::::<><>::
+DePixelHalbfett.ttf::FontFile::5321542606347081261::1702656401::1702656409::1::::<><>::
 IBMPlexMono-Regular.ttf::FontFile::2228844532152200587::1699662122::1702101179::1::::<><>::
 IBMPlexMono-SemiBold.ttf::FontFile::7561910349731707430::1699662122::1702101179::1::::<><>::
 plex_mono_16.tres::FontFile::-1::1699662122::0::1::::<><>::res://fonts/IBMPlexMono-Regular.ttf
 plex_mono_24.tres::FontFile::-1::1699662122::0::1::::<><>::res://fonts/IBMPlexMono-Regular.ttf
 plex_mono_28.tres::FontFile::-1::1699662122::0::1::::<><>::res://fonts/IBMPlexMono-Regular.ttf
 PublicPixel.ttf::FontFile::5702994285486917438::1702121554::1702121563::1::::<><>::
+Retro Gaming.ttf::FontFile::9045740843963569790::1702650979::1702650979::1::::<><>::
 ::res://globals/::1699662122
 Types.gd::GDScript::-1::1699662122::0::1::::<>Node<>::
 ::res://Images/::1702101179
@@ -70,19 +73,23 @@ Exit.gd::GDScript::-1::1699662122::0::1::::Exit<>Resource<>::
 GameRoom.gd::GDScript::-1::1699662122::0::1::::GameRoom<>PanelContainer<>::
 GameRoom.tscn::PackedScene::-1::1699662122::0::1::::<><>::res://fonts/plex_mono_16.tres<>res://rooms/GameRoom.gd<>res://fonts/plex_mono_24.tres
 RoomManager.gd::GDScript::-1::1699662122::0::1::::<>Node<>::
-::res://themes/::1702287114
-::res://themes/buttons/::1702300793
-button_normal.tres::StyleBoxTexture::6727328063929146542::1702300787::0::1::::<><>::uid://bf6561mp7p4a8::::res://themes/textures/buttons_4x.png
-gender_buttons.tres::StyleBoxTexture::8741038104836667935::1702300350::0::1::::<><>::uid://2re1qm488wri
-menu_button.tres::Theme::7493925210991370375::1702236526::0::1::::<><>::uid://cnitqn7vm8ef3::::res://fonts/PublicPixel.ttf<>uid://db8fmhelxc8kp::::res://themes/textures/Interface.png
-::res://themes/panels/::1702300793
-fancy_paper_panel.tres::StyleBoxTexture::3457299776710291118::1702298911::0::1::::<><>::uid://drt0a1dd85lf0::::res://themes/textures/GUI.png
-golden_border_panel.tres::StyleBoxTexture::7492710055494010894::1702238931::0::1::::<><>::uid://8qtfdc8ydvqs::::res://themes/textures/UI books & more.png
-paper_panel.tres::StyleBoxTexture::2961430543594125215::1702300435::0::1::::<><>::uid://db8fmhelxc8kp::::res://themes/textures/Interface.png
-wooden_border_empty.tres::StyleBoxTexture::7927923099717587059::1702241877::0::1::::<><>::uid://b3tu700cnup2e
-wooden_border_panel.tres::StyleBoxTexture::9167791971628109232::1702238931::0::1::::<><>::uid://8qtfdc8ydvqs::::res://themes/textures/UI books & more.png
-wooden_frame.tres::StyleBoxTexture::9044307993909915582::1702300257::0::1::::<><>::uid://b3tu700cnup2e::::res://themes/textures/GUI_4x.png
-::res://themes/textures/::1702300787
+::res://themes/::1702658074
+::res://themes/buttons/::1702658064
+button_normal.tres::StyleBoxTexture::6727328063929146542::1702300787::0::1::::<><>::uid://bf6561mp7p4a8
+gender_button_female.tres::StyleBoxTexture::6169257371612563988::1702553181::0::1::::<><>::uid://cmhxtr3yymxur
+gender_button_male.tres::StyleBoxTexture::8741038104836667935::1702300350::0::1::::<><>::uid://2re1qm488wri
+menu_button (2).tres::StyleBoxTexture::507203376565748577::1702658045::0::1::::<><>::uid://ebrgpkpmqlgj::::res://themes/textures/588a6507d06f6719692a2d15.png
+menu_button.tres::Theme::7493925210991370375::1702590340::0::1::::<><>::uid://cnitqn7vm8ef3::::res://fonts/PublicPixel.ttf<>uid://db8fmhelxc8kp::::res://themes/textures/Interface.png
+::res://themes/panels/::1702658074
+fancy_paper_panel.tres::StyleBoxTexture::3457299776710291118::1702590340::0::1::::<><>::uid://drt0a1dd85lf0::::res://themes/textures/GUI.png
+golden_border_panel.tres::StyleBoxTexture::7492710055494010894::1702590340::0::1::::<><>::uid://8qtfdc8ydvqs::::res://themes/textures/UI books & more.png
+main_panel.tres::StyleBoxFlat::5654604431146446797::1702651012::0::1::::<><>::
+paper_panel.tres::StyleBoxTexture::2961430543594125215::1702590340::0::1::::<><>::uid://db8fmhelxc8kp::::res://themes/textures/Interface.png
+wooden_border_empty.tres::StyleBoxTexture::7927923099717587059::1702622162::0::1::::<><>::uid://b3tu700cnup2e::::res://themes/textures/GUI_4x.png
+wooden_border_panel.tres::StyleBoxTexture::9167791971628109232::1702590340::0::1::::<><>::uid://8qtfdc8ydvqs::::res://themes/textures/UI books & more.png
+wooden_frame.tres::StyleBoxTexture::9044307993909915582::1702590340::0::1::::<><>::uid://b3tu700cnup2e::::res://themes/textures/GUI_4x.png
+::res://themes/textures/::1702657703
+588a6507d06f6719692a2d15.png::CompressedTexture2D::283863459943154081::1702657703::1702657703::1::::<><>::
 bg1.jpg::CompressedTexture2D::939344120821362839::1702130025::1702214981::1::::<><>::
 buttons_1x.png::CompressedTexture2D::7944514314760721824::1702298639::1702300787::1::::<><>::
 buttons_2x.png::CompressedTexture2D::8623382385899860451::1702298639::1702300787::1::::<><>::

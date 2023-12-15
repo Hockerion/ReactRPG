@@ -1,249 +1,355 @@
-[gd_scene load_steps=5 format=3 uid="uid://dogws7ymqkh3q"]
+[gd_scene load_steps=7 format=3 uid="uid://dogws7ymqkh3q"]
 
-[ext_resource type="StyleBox" path="res://main_panel.tres" id="1"]
-[ext_resource type="FontFile" path="res://fonts/plex_mono_24.tres" id="2"]
-[ext_resource type="FontFile" path="res://fonts/plex_mono_16.tres" id="3"]
+[ext_resource type="FontFile" uid="uid://d143ba2c10g1k" path="res://fonts/Retro Gaming.ttf" id="1_4ivk8"]
+[ext_resource type="StyleBox" uid="uid://chx55lukc6h25" path="res://dark_panel.tres" id="2_uv3ab"]
 [ext_resource type="Script" path="res://SidePanel.gd" id="4"]
+[ext_resource type="StyleBox" uid="uid://d3u7guwnuq2gy" path="res://themes/panels/wooden_border_panel.tres" id="4_qqskj"]
+
+[sub_resource type="Theme" id="Theme_7bom5"]
+default_font = ExtResource("1_4ivk8")
+default_font_size = 15
+
+[sub_resource type="Theme" id="Theme_5c8rx"]
 
 [node name="SidePanel" type="PanelContainer"]
-custom_minimum_size = Vector2(320, 0)
-offset_left = 856.0
-offset_right = 1337.0
-offset_bottom = 560.0
-theme_override_styles/panel = ExtResource("1")
+offset_right = 543.0
+offset_bottom = 793.0
+theme = SubResource("Theme_7bom5")
+theme_override_styles/panel = ExtResource("2_uv3ab")
 script = ExtResource("4")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
 
 [node name="SidePanel" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-
-[node name="CharInfo" type="VBoxContainer" parent="MarginContainer/SidePanel"]
-custom_minimum_size = Vector2(471, 300)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/SidePanel/CharInfo"]
-layout_mode = 2
-
-[node name="PersonalInfo" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer"]
-layout_mode = 2
-
-[node name="SPCName" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/PersonalInfo"]
-layout_mode = 2
-text = "   Name:         "
-
-[node name="SPCSex" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/PersonalInfo"]
-layout_mode = 2
-text = "   Sex: "
-
-[node name="SPCRace" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/PersonalInfo"]
-layout_mode = 2
-text = "   Race: "
-
-[node name="SPCClass" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/PersonalInfo"]
-layout_mode = 2
-text = "   Class: "
-
-[node name="SPCHealth" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/PersonalInfo"]
-layout_mode = 2
-text = "   Health:  "
-
-[node name="SPCMana" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/PersonalInfo"]
-layout_mode = 2
-text = "   Mana:"
-
-[node name="PerInfovalues" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer"]
-layout_mode = 2
-
-[node name="SPCNameval" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/PerInfovalues"]
-layout_mode = 2
-text = "Unknown                 "
-
-[node name="SPCSexval" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/PerInfovalues"]
-layout_mode = 2
-text = "Unknown                    "
-
-[node name="SPRaceval" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/PerInfovalues"]
-layout_mode = 2
-text = "Unknown                 "
-
-[node name="SPClassval" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/PerInfovalues"]
-layout_mode = 2
-text = "Unknown                 "
-
-[node name="SPCHealthval" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/PerInfovalues"]
-layout_mode = 2
-text = "0"
-
-[node name="SPCManaval" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/PerInfovalues"]
-layout_mode = 2
-text = "0"
-
-[node name="SideAttr" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer"]
-layout_mode = 2
-
-[node name="SPSTR" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/SideAttr"]
-layout_mode = 2
-text = "Strength: "
-
-[node name="SPDXT" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/SideAttr"]
-layout_mode = 2
-text = "Dexterity: "
-
-[node name="SPWIS" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/SideAttr"]
-layout_mode = 2
-text = "Wisdom"
-
-[node name="SPEND" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/SideAttr"]
-layout_mode = 2
-text = "Endurance:    "
-
-[node name="SPCHR" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/SideAttr"]
-layout_mode = 2
-text = "Charisma: "
-
-[node name="SPLCK" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/SideAttr"]
-layout_mode = 2
-text = "Luck: "
-
-[node name="AttrValue" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer"]
-layout_mode = 2
-
-[node name="SPSTRval" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/AttrValue"]
-layout_mode = 2
-text = "0"
-
-[node name="SPDXTval" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/AttrValue"]
-layout_mode = 2
-text = "0"
-
-[node name="SPWISval" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/AttrValue"]
-layout_mode = 2
-text = "0"
-
-[node name="SPENDval" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/AttrValue"]
-layout_mode = 2
-text = "0"
-
-[node name="SPCHRval" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/AttrValue"]
-layout_mode = 2
-text = "0"
-
-[node name="SPLCKval" type="Label" parent="MarginContainer/SidePanel/CharInfo/HBoxContainer/AttrValue"]
-layout_mode = 2
-text = "0"
-
-[node name="SPAbilities" type="HBoxContainer" parent="MarginContainer/SidePanel/CharInfo"]
-layout_mode = 2
-
-[node name="Abilities" type="Label" parent="MarginContainer/SidePanel/CharInfo/SPAbilities"]
-layout_mode = 2
-text = "   Abilities:      "
-
-[node name="SkillssetSP" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/SPAbilities"]
-layout_mode = 2
-
-[node name="Ability1SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/SPAbilities/SkillssetSP"]
-layout_mode = 2
-text = "[1] Skill 1                 "
-
-[node name="Ability2SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/SPAbilities/SkillssetSP"]
-layout_mode = 2
-text = "[2] Skill 2"
-
-[node name="Ability3SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/SPAbilities/SkillssetSP"]
-layout_mode = 2
-text = "[3] Skill 3"
-
-[node name="Ability4SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/SPAbilities/SkillssetSP"]
-layout_mode = 2
-text = "[4] Skill 4              "
-
-[node name="SkillsDefSP" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/SPAbilities"]
-layout_mode = 2
-
-[node name="Abilitydef1SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/SPAbilities/SkillsDefSP"]
-layout_mode = 2
-text = "None"
-
-[node name="Abilitydef2SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/SPAbilities/SkillsDefSP"]
-layout_mode = 2
-text = "None"
-
-[node name="Abilitydef3SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/SPAbilities/SkillsDefSP"]
-layout_mode = 2
-text = "None"
-
-[node name="Abilitydef4SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/SPAbilities/SkillsDefSP"]
-layout_mode = 2
-text = "None"
-
-[node name="Rows" type="VBoxContainer" parent="MarginContainer/SidePanel"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
 theme_override_constants/separation = 20
 
-[node name="TitleSection" type="VBoxContainer" parent="MarginContainer/SidePanel/Rows"]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="InfoLabel" type="Label" parent="MarginContainer/SidePanel/Rows/TitleSection"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.631373, 0.631373, 0.631373, 1)
-theme_override_fonts/font = ExtResource("3")
-text = "_________________________________________________
-You are in..."
-
-[node name="RoomNameLabel" type="Label" parent="MarginContainer/SidePanel/Rows/TitleSection"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.980392, 1, 0.580392, 1)
-theme_override_fonts/font = ExtResource("2")
-text = "A Room"
-
-[node name="RoomDescriptionLabel" type="Label" parent="MarginContainer/SidePanel/Rows"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3")
-text = "This will be where the room's description goes."
-autowrap_mode = 3
-
-[node name="ListArea" type="VBoxContainer" parent="MarginContainer/SidePanel/Rows"]
+[node name="CharInfo" type="VBoxContainer" parent="MarginContainer/SidePanel"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ExitLabel" type="RichTextLabel" parent="MarginContainer/SidePanel/Rows/ListArea"]
+[node name="CharInfoPanel" type="Panel" parent="MarginContainer/SidePanel/CharInfo"]
+custom_minimum_size = Vector2(2.08165e-12, 200)
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("3")
-bbcode_enabled = true
+theme_override_styles/panel = ExtResource("4_qqskj")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_right = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="PersonalInfo" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="SPCName" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PersonalInfo"]
+custom_minimum_size = Vector2(103, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Name:"
+
+[node name="SPCSex" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PersonalInfo"]
+custom_minimum_size = Vector2(103, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sex:"
+
+[node name="SPCRace" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PersonalInfo"]
+custom_minimum_size = Vector2(103, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Race:"
+
+[node name="SPCClass" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PersonalInfo"]
+custom_minimum_size = Vector2(103, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Class:"
+
+[node name="SPCHealth" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PersonalInfo"]
+custom_minimum_size = Vector2(103, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Health:"
+
+[node name="SPCMana" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PersonalInfo"]
+custom_minimum_size = Vector2(103, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Mana:"
+
+[node name="PerInfovalues" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="SPCNameval" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PerInfovalues"]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Unknown"
+
+[node name="SPCSexval" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PerInfovalues"]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Unknown"
+
+[node name="SPRaceval" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PerInfovalues"]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Unknown"
+
+[node name="SPClassval" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PerInfovalues"]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Unknown"
+
+[node name="SPCHealthval" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PerInfovalues"]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="SPCManaval" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/PerInfovalues"]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="SideAttr" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="SPSTR" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/SideAttr"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Strength: "
+
+[node name="SPDXT" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/SideAttr"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Dexterity: "
+
+[node name="SPWIS" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/SideAttr"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Wisdom:"
+
+[node name="SPEND" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/SideAttr"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Endurance:"
+
+[node name="SPCHR" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/SideAttr"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Charisma: "
+
+[node name="SPLCK" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/SideAttr"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Luck: "
+
+[node name="AttrValue" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="SPSTRval" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/AttrValue"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="SPDXTval" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/AttrValue"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="SPWISval" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/AttrValue"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="SPENDval" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/AttrValue"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="SPCHRval" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/AttrValue"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="SPLCKval" type="Label" parent="MarginContainer/SidePanel/CharInfo/CharInfoPanel/MarginContainer/HBoxContainer/AttrValue"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="AbilitiesPanel" type="Panel" parent="MarginContainer/SidePanel/CharInfo"]
+custom_minimum_size = Vector2(2.08165e-12, 150)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_qqskj")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="SPAbilities" type="HBoxContainer" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="Abilities" type="Label" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Abilities:"
+
+[node name="SkillssetSP" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities"]
+custom_minimum_size = Vector2(202, 2.08165e-12)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Ability1SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities/SkillssetSP"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "[1] Skill 1"
+
+[node name="Ability2SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities/SkillssetSP"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "[2] Skill 2"
+
+[node name="Ability3SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities/SkillssetSP"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "[3] Skill 3"
+
+[node name="Ability4SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities/SkillssetSP"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "[4] Skill 4"
+
+[node name="SkillsDefSP" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Abilitydef1SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities/SkillsDefSP"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "None"
+
+[node name="Abilitydef2SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities/SkillsDefSP"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "None"
+
+[node name="Abilitydef3SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities/SkillsDefSP"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "None"
+
+[node name="Abilitydef4SP" type="Label" parent="MarginContainer/SidePanel/CharInfo/AbilitiesPanel/MarginContainer/SPAbilities/SkillsDefSP"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "None"
+
+[node name="RoomInfo" type="Panel" parent="MarginContainer/SidePanel/CharInfo"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("4_qqskj")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/SidePanel/CharInfo/RoomInfo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Rows" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_5c8rx")
+theme_override_constants/separation = 40
+
+[node name="TitleSection" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows"]
+layout_mode = 2
+
+[node name="InfoLabel" type="Label" parent="MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows/TitleSection"]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "You are in..."
+
+[node name="RoomNameLabel" type="Label" parent="MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows/TitleSection"]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0.596078, 0.47451, 0.219608, 1)
+text = "A Room"
+
+[node name="RoomDescriptionLabel" type="Label" parent="MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows/TitleSection"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This will be where the room's description goes."
+autowrap_mode = 3
+
+[node name="ListArea" type="VBoxContainer" parent="MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ExitLabel" type="Label" parent="MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows/ListArea"]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Exits: 
 Option"
-fit_content = true
 
-[node name="NpcLabel" type="RichTextLabel" parent="MarginContainer/SidePanel/Rows/ListArea"]
+[node name="NpcLabel" type="Label" parent="MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows/ListArea"]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("3")
-bbcode_enabled = true
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "NPCs: 
 Option"
-fit_content = true
 
-[node name="ItemLabel" type="RichTextLabel" parent="MarginContainer/SidePanel/Rows/ListArea"]
+[node name="ItemLabel" type="Label" parent="MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows/ListArea"]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("3")
-bbcode_enabled = true
+size_flags_vertical = 7
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Items: 
 Option"
-fit_content = true
 
-[node name="HelpLabel" type="Label" parent="MarginContainer/SidePanel/Rows"]
+[node name="HelpLabel" type="Label" parent="MarginContainer/SidePanel/CharInfo/RoomInfo/MarginContainer/Rows"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.827451, 0.580392, 1)
-theme_override_fonts/font = ExtResource("3")
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.627451, 0.423529, 0.0823529, 1)
 text = "You can type 'help' to see all possible commands."
+autowrap_mode = 3
